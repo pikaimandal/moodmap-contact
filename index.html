@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mood Map | Share your mood with the World</title>
+    <meta name="description" content=" Mood Map is a super fun mini-app on Worldcoin's World App. Share your mood with the World and predict your country's mood to earn WLD.">
+    <meta name="keywords" content="mood map, mood app, worldcoin mood map, mood mini app, mood map app, worldcoin mood, world mood map, predict mood and earn wld">
+    <meta name="author" content="Mood Map">
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://moodapp.world/">
+    <meta property="og:title" content="Mood Map | Share your mood with the World">
+    <meta property="og:description" content="Share your mood with the World and predict your country's mood to earn WLD.">
+    <meta property="og:image" content="https://moodapp.world/og-image.jpg">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://moodapp.world/">
+    <meta property="twitter:title" content="Mood Map | Share your mood with the World">
+    <meta property="twitter:description" content="Share your mood with the World and predict your country's mood to earn WLD.">
+    <meta property="twitter:image" content="https://moodapp.world/og-image.jpg">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://moodapp.world/">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/moodmapfavicon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/moodmapfavicon.png">
+    
+    <!-- Schema.org JSON-LD -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "Mood Map",
+        "description": "Share your mood with the World and predict your country's mood to earn WLD.",
+        "url": "https://moodapp.world",
+        "applicationCategory": "CommunicationApplication",
+        "operatingSystem": "Web, iOS, Android",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+        }
+    }
+    </script>
+    
+    <style>
+        /* Contact Section Styles */
+        .contact {
+            padding: 80px 0;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+        
+        .contact h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 2.5rem;
+            font-weight: 700;
+        }
+        
+        .contact-subtitle {
+            text-align: center;
+            margin-bottom: 60px;
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+        
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: start;
+        }
+        
+        .contact-form {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 40px;
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .contact-form h3 {
+            margin-bottom: 30px;
+            font-size: 1.8rem;
+            color: #fff;
+        }
+        
+        .form-group {
+            margin-bottom: 25px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: #fff;
+        }
+        
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 15px;
+            border: none;
+            border-radius: 10px;
+            background: rgba(255, 255, 255, 0.9);
+            font-size: 16px;
+            transition: all 0.3s ease;
+        }
+        
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            outline: none;
+            background: rgba(255, 255, 255, 1);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+        }
+        
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+        
+        .submit-btn {
+            background: linear-gradient(45deg, #ff6b6b, #ee5a24);
+            color: white;
+            padding: 15px 40px;
+            border: none;
+            border-radius: 50px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            width: 100%;
+        }
+        
+        .submit-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(238, 90, 36, 0.4);
+        }
+        
+        .faq-section {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 40px;
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .faq-section h3 {
+            margin-bottom: 30px;
+            font-size: 1.8rem;
+            color: #fff;
+        }
+        
+        .faq-item {
+            margin-bottom: 20px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+            padding-bottom: 20px;
+        }
+        
+        .faq-item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+        }
+        
+        .faq-question {
+            background: none;
+            border: none;
+            color: #fff;
+            font-size: 16px;
+            font-weight: 600;
+            padding: 15px 0;
+            width: 100%;
+            text-align: left;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: all 0.3s ease;
+        }
+        
+        .faq-question:hover {
+            color: #ffd700;
+        }
+        
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+            color: rgba(255, 255, 255, 0.9);
+            line-height: 1.6;
+        }
+        
+        .faq-answer.active {
+            max-height: 200px;
+            padding-top: 10px;
+        }
+        
+        .faq-icon {
+            transition: transform 0.3s ease;
+        }
+        
+        .faq-item.active .faq-icon {
+            transform: rotate(180deg);
+        }
+        
+        @media (max-width: 768px) {
+            .contact-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+            
+            .contact-form,
+            .faq-section {
+                padding: 30px 20px;
+            }
+            
+            .contact h2 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="gradient-bg">
+        <header>
+            <div class="container">
+                <nav>
+                    <a href="" class="logo">
+                       <img src="moodmap.webp" alt="Mood Map Logo" style="height: 32px; width: auto; vertical-align: middle; margin-right: 8px;">
+                         Mood Map
+                    </a>
+                    <ul class="nav-links">
+                        <li><a href="#features">Features</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="#download">Download</a></li>
+                        <li><a href="https://help.moodapp.world/">Help</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <div class="hero-text">
+                        <h1>Share your mood with the World</h1>
+                        <p class="hero-subtitle">Built on the World for the World</p>
+                        <p class="hero-description">
+                            Mood Map is a Worldcoin mini-app where you can share your mood with the World using an emoji. Earn WLD by predicting your country's mood in the next 24 hours.  
+                        </p>
+                        <div class="cta-buttons">
+                            <a href="https://world.org/mini-app?app_id=app_d3e5db57dc4dcaaa5c37bf40fdf34cf5" target="_blank" class="btn btn-primary">
+                                📱 Get Mood Map
+                            </a>
+                            <a href="#" class="btn btn-secondary" id="qr-button">
+                                📱 Scan QR
+                            </a>
+                        </div>
+                    </div>
+                    <div class="hero-visual">
+                        <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Mood Map Interface" class="hero-phone">
+                    </div>
+                </div>
+                <!-- QR Code Modal -->
+                <div id="qr-modal" class="qr-modal">
+                 <div class="qr-modal-content">
+                    <span class="qr-close">&times;</span>
+                      <h3>Scan to Get Mood Map</h3>
+                        <img src="moodmapqr.webp" alt="Mood Map QR Code" class="qr-image">
+                           <p>Scan with your phone to open in World App</p>
+                 </div>
+                </div> <!-- QR Code Modal -->
+            </div>
+        </section>
+    </div>
+    
+    <section id="features" class="features">
+        <div class="container">
+            <h2>Features</h2>
+            <p class="features-subtitle">Built on the World for the World</p>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <span class="feature-icon">😄</span>
+                    <h3>Share using emoji</h3>
+                    <p>You can share your mood using an emoji with just one click. As simple as that.</p>
+                </div>
+                <div class="feature-card">
+                    <span class="feature-icon">🔒</span>
+                    <h3>Privacy First</h3>
+                    <p>We don't ask for your personal information except for your country. Just log in with your wallet and share your mood.</p>
+                </div>
+                <div class="feature-card">
+                    <span class="feature-icon">🚀</span>
+                    <h3>Lightning Fast</h3>
+                    <p>Instantly share your mood by clicking just an emoji in under a second, no bullshit.</p>
+                </div>
+                <div class="feature-card">
+                    <span class="feature-icon">🌐</span>
+                    <h3>Engaging</h3>
+                    <p>View other users' mood on the World map, check each country's mood shared by the users from that country.</p>
+                </div>
+                <div class="feature-card">
+                    <span class="feature-icon">💰</span>
+                    <h3>Earn WLD</h3>
+                    <p>Predict a country's top mood in the next 24 hours with just 1 WLD and earn WLD tokens from the reward pool.</p>
+                </div>
+                <div class="feature-card">
+                    <span class="feature-icon">💎</span>
+                    <h3>Free Forever</h3>
+                    <p>Share your mood with the World every 24 hours completely for free. Optionally, you can predict a country's mood to earn WLD. </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>Mood Map</h2>
+                    <p>
+                        On Mood Map, users can share their mood every 24 hours using just an emoji, completely for free. 
+                        Optionally, if users want to earn some passive income in WLD, they can predict a country's 
+                        mood outcome in the next 24 hours by entering the reward pool with just 1WLD, and earn more WLD tokens
+                        if the users' predictions are correct.
+                    </p>
+                    <p>
+                        But the Mood Map app will always be free and super fun to share users' moods. Users can engage with the
+                        World map and click on any country to see the country's moods shared by other users on the World app.
+                    </p>
+                    <a href="https://worldcoin.org/mini-app?app_id=app_d3e5db57dc4dcaaa5c37bf40fdf34cf5" class="worldcoin-badge" target="_blank" rel="noopener">
+                        🌍 Built on the World
+                    </a>
+                </div>
+                <div class="about-visual">
+                    <img src="https://images.unsplash.com/photo-1611224923853-80b023f02d71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Secure Communication" class="about-image">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Get in Touch</h2>
+            <p class="contact-subtitle">Have questions? We're here to help you with Mood Map</p>
+            
+            <div class="contact-grid">
+                <div class="contact-form">
+                    <h3>📧 Contact Us</h3>
+                    <form id="contactForm" action="#" method="POST">
+                        <div class="form-group">
+                            <label for="name">Name *</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="subject">Subject *</label>
+                            <select id="subject" name="subject" required>
+                                <option value="">Select a topic</option>
+                                <option value="general">General Inquiry</option>
+                                <option value="technical">Technical Support</option>
+                                <option value="wld">WLD Rewards Issue</option>
+                                <option value="bug">Bug Report</option>
+                                <option value="feature">Feature Request</option>
+                                <option value="partnership">Partnership</option>
+                                <option value="press">Press/Media</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Message *</label>
+                            <textarea id="message" name="message" placeholder="Tell us how we can help you..." required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="submit-btn">
+                            🚀 Send Message
+                        </button>
+                    </form>
+                </div>
+                
+                <div class="faq-section">
+                    <h3>❓ Frequently Asked Questions</h3>
+                    
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            How do I start using Mood Map?
+                            <span class="faq-icon">▼</span>
+                        </button>
+                        <div class="faq-answer">
+                            Download World App, find Mood Map in the mini-apps section, and start sharing your mood with just one emoji tap. It's completely free!
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            How do WLD rewards work?
+                            <span class="faq-icon">▼</span>
+                        </button>
+                        <div class="faq-answer">
+                            Predict a country's top mood in the next 24 hours by entering 1 WLD into the reward pool. If your prediction is correct, you earn from the pool!
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            Is my data safe and private?
+                            <span class="faq-icon">▼</span>
+                        </button>
+                        <div class="faq-answer">
+                            Absolutely! We only collect your country and mood emoji. No personal information, no tracking, just pure mood sharing fun.
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            Can I change my mood after sharing?
+                            <span class="faq-icon">▼</span>
+                        </button>
+                        <div class="faq-answer">
+                            You can share your mood once every 24 hours. This keeps the data authentic and prevents spam while ensuring fair participation.
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            What countries are supported?
+                            <span class="faq-icon">▼</span>
+                        </button>
+                        <div class="faq-answer">
+                            Mood Map supports all countries where World App is available. The global mood map shows real-time data from users worldwide.
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            How accurate are the predictions?
+                            <span class="faq-icon">▼</span>
+                        </button>
+                        <div class="faq-answer">
+                            Predictions are based on real user data and trending patterns. The more users participate, the more accurate the country mood predictions become.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <footer id="download">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>
+                       <img src="moodmap.webp" alt="Mood Map Logo" style="height: 24px; width: auto; vertical-align: middle; margin-right: 8px;">
+                           Mood Map
+                    </h3>
+                    <p>Share your mood with the World and predict your country's mood to earn WLD tokens.</p>
+                    <a href="https://worldcoin.org/mini-app?app_id=app_d3e5db57dc4dcaaa5c37bf40fdf34cf5" class="btn btn-secondary" target="_blank" rel="noopener" style="margin-top: 15px; display: inline-block;">
+                        <h4>📱 Download</h4>
+                    </a>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <a href="#features">Features</a>
+                    <a href="#about">About</a>
+                    <a href="#contact">Contact</a>
+                    <a href="https://help.moodapp.world/">Help Center</a>
+                </div>
+                <div class="footer-section">
+                    <h3>Powered By</h3>
+                    <a href="https://world.org" target="_blank" rel="noopener">Worldcoin</a>
+                    <a href="https://worldapp.org/world-app" target="_blank" rel="noopener">World App</a>
+                    <a href="https://docs.world.org" target="_blank" rel="noopener">Documentation</a>
+                </div>
+                <div class="footer-section">
+                    <h3>Stay Connected</h3>
+                    <p>📧 help@moodapp.world</p>
+                    <p>🌐 moodapp.world</p>
+                    <p>&nbsp;𝕏  @worldmoodmap</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Mood Map. All rights reserved. | Built with ❤️ for the World</p>
+            </div>
+        </div>
+    </footer>
+    
+    <script>
+document.addEventListener('DOMContentLoaded', function() {
+    // QR Modal functionality
+    const qrButton = document.getElementById('qr-button');
+    const qrModal = document.getElementById('qr-modal');
+    const qrClose = document.querySelector('.qr-close');
+    
+    // Show QR on click
+    qrButton.addEventListener('click', function(e) {
+        e.preventDefault();
+        qrModal.style.display = 'block';
+        document.body.style.overflow = 'hidden'; // Prevent background scroll
+    });
+    
+    // Close QR modal
+    function closeModal() {
+        qrModal.style.display = 'none';
+        document.body.style.overflow = 'auto'; // Restore scroll
+    }
+    
+    qrClose.addEventListener('click', closeModal);
+    
+    // Close on background click
+    qrModal.addEventListener('click', function(e) {
+        if (e.target === qrModal) {
+            closeModal();
+        }
+    });
+    
+    // Close on Escape key
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && qrModal.style.display === 'block') {
+            closeModal();
+        }
+    });
+
+    // FAQ functionality
+    const faqQuestions = document.querySelectorAll('.faq-question');
+    
+    faqQuestions.forEach(question => {
+        question.addEventListener('click', function() {
+            const faqItem = this.parentElement;
+            const faqAnswer = faqItem.querySelector('.faq-answer');
+            const isActive = faqItem.classList.contains('active');
+            
+            // Close all other FAQ items
+            document.querySelectorAll('.faq-item').forEach(item => {
+                item.classList.remove('active');
+                item.querySelector('.faq-answer').classList.remove('active');
+            });
+            
+            // Toggle current item
+            if (!isActive) {
+                faqItem.classList.add('active');
+                faqAnswer.classList.add('active');
+            }
+        });
+    });
+
+    // Contact form functionality
+    const contactForm = document.getElementById('contactForm');
+    
+    contactForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        // Get form data
+        const formData = new FormData(contactForm);
+        const name = formData.get('name');
+        const email = formData.get('email');
+        const subject = formData.get('subject');
+        const message = formData.get('message');
+        
+        // Basic validation
+        if (!name || !email || !subject || !message) {
+            alert('Please fill in all required fields.');
+            return;
+        }
+        
+        // Show success message (you'll want to replace this with actual form submission)
+        const submitBtn = contactForm.querySelector('.submit-btn');
+        const originalText = submitBtn.innerHTML;
+        
+        submitBtn.innerHTML = '✅ Message Sent!';
+        submitBtn.disabled = true;
+        
+        // Reset form after 2 seconds
+        setTimeout(() => {
+            contactForm.reset();
+            submitBtn.innerHTML = originalText;
+            submitBtn.disabled = false;
+            alert('Thank you for your message! We\'ll get back to you within 24 hours.');
+        }, 2000);
+        
+        // Here you would typically send the form data to your backend
+        console.log('Form submitted:', { name, email, subject, message });
+    });
+});
+</script>
+</body>
+</html>
