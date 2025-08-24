@@ -13,14 +13,14 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://help.moodapp.world/">
     <meta property="og:title" content="Contact Us | Mood Map">
-    <meta property="og:description" content="Get in touch with Mood Map team. Contact support, ask questions, or share feedback.">
+    <meta property="og:description" content="Get in touch with the Mood Map team. Contact support, ask questions, or share feedback.">
     <meta property="og:image" content="https://moodapp.world/og-image.jpg">
     
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://help.moodapp.world/">
     <meta property="twitter:title" content="Contact Us | Mood Map">
-    <meta property="twitter:description" content="Get in touch with Mood Map team. Contact support, ask questions, or share feedback.">
+    <meta property="twitter:description" content="Get in touch with the Mood Map team. Contact support, ask questions, or share feedback.">
     <meta property="twitter:image" content="https://moodapp.world/og-image.jpg">
     
     <!-- Canonical URL -->
@@ -58,10 +58,10 @@
             <div class="contact-grid">
                 <div class="contact-form">
                     <h3>📧 Contact Us</h3>
-                    <form id="contactForm" action="#" method="POST">
+                    <form id="contactForm" action="https://formsubmit.co/pikai.mandal2001@outlook.com" method="POST">
                         <div class="form-group">
-                            <label for="name">Name *</label>
-                            <input type="text" id="name" name="name" required>
+                            <label for="wallet">Wallet Address *</label>
+                            <input type="text" id="wallet" name="wallet" placeholder="0x..." required>
                         </div>
                         
                         <div class="form-group">
@@ -170,7 +170,7 @@
                            Mood Map
                     </h3>
                     <p>Share your mood with the World and predict your country's mood to earn WLD tokens.</p>
-                    <a href="https://worldcoin.org/mini-app?app_id=app_d3e5db57dc4dcaaa5c37bf40fdf34cf5" class="btn btn-secondary" target="_blank" rel="noopener" style="margin-top: 15px; display: inline-block;">
+                    <a href="https://worldcoin.org/mini-app?app_id=app_d3e5db57dc4dcaaa5c37bf40fdf34cf5" class="btn btn-secondary" target="_blank" rel="noopener" style="margin-top: 15px; display: inline-flex; align-items: center; gap: 8px;">
                         <h4>📱 Download</h4>
                     </a>
                 </div>
@@ -222,44 +222,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 faqAnswer.classList.add('active');
             }
         });
-    });
-
-    // Contact form functionality
-    const contactForm = document.getElementById('contactForm');
-    
-    contactForm.addEventListener('submit', function(e) {
-        e.preventDefault();
-        
-        // Get form data
-        const formData = new FormData(contactForm);
-        const name = formData.get('name');
-        const email = formData.get('email');
-        const subject = formData.get('subject');
-        const message = formData.get('message');
-        
-        // Basic validation
-        if (!name || !email || !subject || !message) {
-            alert('Please fill in all required fields.');
-            return;
-        }
-        
-        // Show success message (you'll want to replace this with actual form submission)
-        const submitBtn = contactForm.querySelector('.submit-btn');
-        const originalText = submitBtn.innerHTML;
-        
-        submitBtn.innerHTML = '✅ Message Sent!';
-        submitBtn.disabled = true;
-        
-        // Reset form after 2 seconds
-        setTimeout(() => {
-            contactForm.reset();
-            submitBtn.innerHTML = originalText;
-            submitBtn.disabled = false;
-            alert('Thank you for your message! We\'ll get back to you within 24 hours.');
-        }, 2000);
-        
-        // Here you would typically send the form data to your backend
-        console.log('Form submitted:', { name, email, subject, message });
     });
 });
 </script>
