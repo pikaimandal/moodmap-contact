@@ -3,68 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mood Map | Share your mood with the World</title>
-    <meta name="description" content=" Mood Map is a super fun mini-app on Worldcoin's World App. Share your mood with the World and predict your country's mood to earn WLD.">
-    <meta name="keywords" content="mood map, mood app, worldcoin mood map, mood mini app, mood map app, worldcoin mood, world mood map, predict mood and earn wld">
+    <title>Contact Us | Mood Map</title>
+    <meta name="description" content="Get in touch with Mood Map team. Contact support, ask questions, or share feedback about our Worldcoin mini-app.">
+    <meta name="keywords" content="mood map contact, mood app support, worldcoin mood map help">
     <meta name="author" content="Mood Map">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="contact-styles.css">
     
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://help.moodapp.world/">
-    <meta property="og:title" content="Mood Map | Share your mood with the World">
-    <meta property="og:description" content="Share your mood with the World and predict your country's mood to earn WLD.">
+    <meta property="og:url" content="https://moodapp.world/contact">
+    <meta property="og:title" content="Contact Us | Mood Map">
+    <meta property="og:description" content="Get in touch with Mood Map team. Contact support, ask questions, or share feedback.">
     <meta property="og:image" content="https://moodapp.world/og-image.jpg">
     
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://help.moodapp.world/">
-    <meta property="twitter:title" content="Mood Map | Share your mood with the World">
-    <meta property="twitter:description" content="Share your mood with the World and predict your country's mood to earn WLD.">
+    <meta property="twitter:url" content="https://moodapp.world/contact">
+    <meta property="twitter:title" content="Contact Us | Mood Map">
+    <meta property="twitter:description" content="Get in touch with Mood Map team. Contact support, ask questions, or share feedback.">
     <meta property="twitter:image" content="https://moodapp.world/og-image.jpg">
     
     <!-- Canonical URL -->
-    <link rel="canonical" href="https://help.moodapp.world/">
+    <link rel="canonical" href="https://moodapp.world/contact">
     
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="/moodmapfavicon.png">
     <link rel="apple-touch-icon" sizes="180x180" href="/moodmapfavicon.png">
-    
-    <!-- Schema.org JSON-LD -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "SoftwareApplication",
-        "name": "Mood Map",
-        "description": "Share your mood with the World and predict your country's mood to earn WLD.",
-        "url": "https://help.moodapp.world",
-        "applicationCategory": "CommunicationApplication",
-        "operatingSystem": "Web, iOS, Android",
-        "offers": {
-            "@type": "Offer",
-            "price": "0",
-            "priceCurrency": "USD"
-        }
-    }
-    </script>
-    
-    <style>
-    </style>
 </head>
 <body>
     <div class="gradient-bg">
         <header>
             <div class="container">
                 <nav>
-                    <a href="https://moodapp.world/" class="logo">
-                       <img src="moodmap.webp" alt="Mood Map Logo" style="height: 32px; width: auto; vertical-align: middle; margin-right: 8px;">
+                    <a href="../index.html" class="logo">
+                       <img src="../moodmap.webp" alt="Mood Map Logo" style="height: 32px; width: auto; vertical-align: middle; margin-right: 8px;">
                          Mood Map
                     </a>
                     <ul class="nav-links">
-                        <li><a href="https://moodapp.world/#features">Features</a></li>
-                        <li><a href="https://moodapp.world/#about">About</a></li>
-                        <li><a href="#">Contact</a></li>
-                        <li><a href="https://moodapp.world/#download">Download</a></li>
+                        <li><a href="../index.html#features">Features</a></li>
+                        <li><a href="../index.html#about">About</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="../index.html#download">Download</a></li>
+                        <li><a href="https://help.moodapp.world/">Help</a></li>
                     </ul>
                 </nav>
             </div>
@@ -187,7 +167,7 @@
             <div class="footer-content">
                 <div class="footer-section">
                     <h3>
-                       <img src="moodmap.webp" alt="Mood Map Logo" style="height: 24px; width: auto; vertical-align: middle; margin-right: 8px;">
+                       <img src="../moodmap.webp" alt="Mood Map Logo" style="height: 24px; width: auto; vertical-align: middle; margin-right: 8px;">
                            Mood Map
                     </h3>
                     <p>Share your mood with the World and predict your country's mood to earn WLD tokens.</p>
@@ -197,8 +177,8 @@
                 </div>
                 <div class="footer-section">
                     <h3>Quick Links</h3>
-                    <a href="#features">Features</a>
-                    <a href="#about">About</a>
+                    <a href="../index.html#features">Features</a>
+                    <a href="../index.html#about">About</a>
                     <a href="#contact">Contact</a>
                     <a href="https://help.moodapp.world/">Help Center</a>
                 </div>
@@ -223,40 +203,6 @@
     
     <script>
 document.addEventListener('DOMContentLoaded', function() {
-    // QR Modal functionality
-    const qrButton = document.getElementById('qr-button');
-    const qrModal = document.getElementById('qr-modal');
-    const qrClose = document.querySelector('.qr-close');
-    
-    // Show QR on click
-    qrButton.addEventListener('click', function(e) {
-        e.preventDefault();
-        qrModal.style.display = 'block';
-        document.body.style.overflow = 'hidden'; // Prevent background scroll
-    });
-    
-    // Close QR modal
-    function closeModal() {
-        qrModal.style.display = 'none';
-        document.body.style.overflow = 'auto'; // Restore scroll
-    }
-    
-    qrClose.addEventListener('click', closeModal);
-    
-    // Close on background click
-    qrModal.addEventListener('click', function(e) {
-        if (e.target === qrModal) {
-            closeModal();
-        }
-    });
-    
-    // Close on Escape key
-    document.addEventListener('keydown', function(e) {
-        if (e.key === 'Escape' && qrModal.style.display === 'block') {
-            closeModal();
-        }
-    });
-
     // FAQ functionality
     const faqQuestions = document.querySelectorAll('.faq-question');
     
